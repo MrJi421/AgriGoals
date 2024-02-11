@@ -27,3 +27,20 @@ flutter:
   uses-material-design: true
   assets:
     - lib/assets/logo.png
+    - lib/assets/event1.jpg
+    - lib/assets/event2.jpg
+    - lib/assets/event3.jpg
+    - lib/assets/news1.jpg
+    - lib/assets/news2.jpg
+    - lib/assets/news3.jpg
+    - lib/assets/backgrnd.png
+    - lib/assets/blog1.jpg
+    - lib/assets/blog2.jpg
+    - lib/assets/blog3.jpg
+    - lib/assets/ferti1.jpg 
+    - lib/assets/ferti2.jpg 
+    - lib/assets/ferti3.jpg 
+    - lib/assets/market1.jpg
+    - lib/assets/market2.png 
+    - lib/assets/market3.jpg
+
