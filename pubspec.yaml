@@ -12,6 +12,11 @@ dependencies:
     sdk: flutter
   font_awesome_flutter: ^9.2.0
   cupertino_icons: ^1.0.2
+  weather: ^3.1.1
+  http: 1.2.0
+  geolocator: ^10.1.0
+  permission_handler: ^10.3.0
+  intl: ^0.19.0
 
 dev_dependencies:
   flutter_test:
