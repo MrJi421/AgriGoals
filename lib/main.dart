@@ -83,6 +83,11 @@ class LoginPage extends StatelessWidget {
 ElevatedButton(
   onPressed: () {
     // Handle sign in button press
+
+
+
+
+
   },
   style: ElevatedButton.styleFrom(
     backgroundColor: const Color(0xFF613EEA),
@@ -133,4 +138,10 @@ ElevatedButton(
       ),
     );
   }
+}
+
+
+
+class SignupPage extens StatelessWidget{
+  
 }
