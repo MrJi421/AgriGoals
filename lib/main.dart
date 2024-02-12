@@ -9,9 +9,6 @@ import 'package:geolocator/geolocator.dart';
 import 'package:permission_handler/permission_handler.dart';
 // Import statements...
 
-
-
-
 void main() {
   runApp(const MyApp());
 }
@@ -32,7 +29,6 @@ class MyApp extends StatelessWidget {
 }
 
 //splash screen not used yet
-
 
 //login page
 class LoginPage extends StatelessWidget {
@@ -75,16 +71,14 @@ class LoginPage extends StatelessWidget {
                 labelText: 'OTP',
               ),
             ),
-
-            
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 // Handle sign in button press
                 Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const HomePage()),
-            );
+                  context,
+                  MaterialPageRoute(builder: (context) => const HomePage()),
+                );
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF613EEA),
@@ -132,7 +126,7 @@ class LoginPage extends StatelessWidget {
             const SizedBox(height: 20),
             Center(
               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
                     'New to AgriGoals? ',
@@ -167,7 +161,6 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
-
 
 //signup page
 class SignupPage extends StatelessWidget {
@@ -324,8 +317,10 @@ class HomePageContent extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                //1st news      
-                SizedBox(height: 10), // Add some space between the title and news item
+                //1st news
+                SizedBox(
+                    height:
+                        10), // Add some space between the title and news item
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -334,27 +329,31 @@ class HomePageContent extends StatelessWidget {
                       height: 80,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage('lib/assets/news1.jpg'), // Replace with your image path
+                          image: AssetImage(
+                              'lib/assets/news1.jpg'), // Replace with your image path
                           fit: BoxFit.cover,
                         ),
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),
-                    SizedBox(width: 10), // Add some space between the image and text
+                    SizedBox(
+                        width: 10), // Add some space between the image and text
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Headline of the News',
+                            'Complete devp works in current fiscal: Himachal agriculture minister to dept',
                             style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          SizedBox(height: 5), // Add some space between headline and description
+                          SizedBox(
+                              height:
+                                  5), // Add some space between headline and description
                           Text(
-                            'Description of the news. You can add more details here to provide a brief overview of the news.',
+                            'Agriculture and animal husbandry minister Chander Kumar on Friday instructed the departmental officers to complete the work of all targeted projects of the current financial year at a fast pace.',
                             style: TextStyle(
                               fontSize: 12,
                             ),
@@ -365,7 +364,9 @@ class HomePageContent extends StatelessWidget {
                   ],
                 ),
                 //2nd news
-                SizedBox(height: 10), // Add some space between the title and news item
+                SizedBox(
+                    height:
+                        10), // Add some space between the title and news item
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -374,27 +375,31 @@ class HomePageContent extends StatelessWidget {
                       height: 80,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage('lib/assets/news2.jpg'), // Replace with your image path
+                          image: AssetImage(
+                              'lib/assets/news2.jpg'), // Replace with your image path
                           fit: BoxFit.cover,
                         ),
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),
-                    SizedBox(width: 10), // Add some space between the image and text
+                    SizedBox(
+                        width: 10), // Add some space between the image and text
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Headline of the News',
+                            'Food Security | Rising Food Insecurity',
                             style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          SizedBox(height: 5), // Add some space between headline and description
+                          SizedBox(
+                              height:
+                                  5), // Add some space between headline and description
                           Text(
-                            'Description of the news. You can add more details here to provide a brief overview of the news.',
+                            ' In real terms, food price inflation exceeded overall inflation in 71% of the 165 countries where data is available.',
                             style: TextStyle(
                               fontSize: 12,
                             ),
@@ -405,7 +410,9 @@ class HomePageContent extends StatelessWidget {
                   ],
                 ),
                 //3rd news
-                SizedBox(height: 10), // Add some space between the title and news item
+                SizedBox(
+                    height:
+                        10), // Add some space between the title and news item
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -414,13 +421,15 @@ class HomePageContent extends StatelessWidget {
                       height: 80,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage('lib/assets/news3.jpg'), // Replace with your image path
+                          image: AssetImage(
+                              'lib/assets/news3.jpg'), // Replace with your image path
                           fit: BoxFit.cover,
                         ),
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),
-                    SizedBox(width: 10), // Add some space between the image and text
+                    SizedBox(
+                        width: 10), // Add some space between the image and text
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -432,7 +441,9 @@ class HomePageContent extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          SizedBox(height: 5), // Add some space between headline and description
+                          SizedBox(
+                              height:
+                                  5), // Add some space between headline and description
                           Text(
                             'Description of the news. You can add more details here to provide a brief overview of the news.',
                             style: TextStyle(
@@ -445,7 +456,9 @@ class HomePageContent extends StatelessWidget {
                   ],
                 ),
                 //4th news
-                SizedBox(height: 10), // Add some space between the title and news item
+                SizedBox(
+                    height:
+                        10), // Add some space between the title and news item
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -454,13 +467,15 @@ class HomePageContent extends StatelessWidget {
                       height: 80,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage('lib/assets/backgrnd.png'), // Replace with your image path
+                          image: AssetImage(
+                              'lib/assets/backgrnd.png'), // Replace with your image path
                           fit: BoxFit.cover,
                         ),
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),
-                    SizedBox(width: 10), // Add some space between the image and text
+                    SizedBox(
+                        width: 10), // Add some space between the image and text
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -472,7 +487,9 @@ class HomePageContent extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          SizedBox(height: 5), // Add some space between headline and description
+                          SizedBox(
+                              height:
+                                  5), // Add some space between headline and description
                           Text(
                             'Description of the news. You can add more details here to provide a brief overview of the news.',
                             style: TextStyle(
@@ -527,19 +544,19 @@ class HomePageContent extends StatelessWidget {
                         headline: 'Event 3 Headline',
                         description: 'Description of Event 3',
                       ),
-                      SizedBox(width: 10), 
+                      SizedBox(width: 10),
                       EventWorkshopItem(
                         imagePath: 'lib/assets/event1.jpg',
                         headline: 'Event 3 Headline',
                         description: 'Description of Event 3',
                       ),
-                      SizedBox(width: 10), 
+                      SizedBox(width: 10),
                       EventWorkshopItem(
                         imagePath: 'lib/assets/event2.jpg',
                         headline: 'Event 3 Headline',
                         description: 'Description of Event 3',
                       ),
-                      SizedBox(width: 10), 
+                      SizedBox(width: 10),
                       // Add more event/workshop items as needed
                     ],
                   ),
@@ -562,7 +579,9 @@ class HomePageContent extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 10), // Add some space between the title and blog items
+                SizedBox(
+                    height:
+                        10), // Add some space between the title and blog items
                 Container(
                   height: 200, // Set the height of the ListView
                   child: ListView(
@@ -599,11 +618,6 @@ class HomePageContent extends StatelessWidget {
   }
 }
 
-
-
-
-
-
 class MarketPageContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -628,7 +642,8 @@ class MarketPageContent extends StatelessWidget {
                 MarketItem(
                   imagePath: 'lib/assets/market1.jpg',
                   title: 'Farming Tool',
-                  description: 'High-quality farming tool for various agricultural tasks.',
+                  description:
+                      'High-quality farming tool for various agricultural tasks.',
                   price: '\$150',
                   rating: 4.5,
                 ),
@@ -636,7 +651,8 @@ class MarketPageContent extends StatelessWidget {
                 MarketItem(
                   imagePath: 'lib/assets/ferti1.jpg',
                   title: 'Organic Fertilizer',
-                  description: 'Organic fertilizer enriched with essential nutrients for plants.',
+                  description:
+                      'Organic fertilizer enriched with essential nutrients for plants.',
                   price: '\$30',
                   rating: 4.2,
                 ),
@@ -644,7 +660,8 @@ class MarketPageContent extends StatelessWidget {
                 MarketItem(
                   imagePath: 'lib/assets/market2.png',
                   title: 'Farming Tool',
-                  description: 'High-quality farming tool for various agricultural tasks.',
+                  description:
+                      'High-quality farming tool for various agricultural tasks.',
                   price: '\$150',
                   rating: 4.5,
                 ),
@@ -652,7 +669,8 @@ class MarketPageContent extends StatelessWidget {
                 MarketItem(
                   imagePath: 'lib/assets/ferti2.jpg',
                   title: 'Organic Fertilizer',
-                  description: 'Organic fertilizer enriched with essential nutrients for plants.',
+                  description:
+                      'Organic fertilizer enriched with essential nutrients for plants.',
                   price: '\$30',
                   rating: 4.2,
                 ),
@@ -660,7 +678,8 @@ class MarketPageContent extends StatelessWidget {
                 MarketItem(
                   imagePath: 'lib/assets/market3.jpg',
                   title: 'Farming Tool',
-                  description: 'High-quality farming tool for various agricultural tasks.',
+                  description:
+                      'High-quality farming tool for various agricultural tasks.',
                   price: '\$150',
                   rating: 4.5,
                 ),
@@ -668,7 +687,8 @@ class MarketPageContent extends StatelessWidget {
                 MarketItem(
                   imagePath: 'lib/assets/ferti3.jpg',
                   title: 'Organic Fertilizer',
-                  description: 'Organic fertilizer enriched with essential nutrients for plants.',
+                  description:
+                      'Organic fertilizer enriched with essential nutrients for plants.',
                   price: '\$30',
                   rating: 4.2,
                 ),
@@ -676,7 +696,8 @@ class MarketPageContent extends StatelessWidget {
                 MarketItem(
                   imagePath: 'lib/assets/market1.jpg',
                   title: 'Farming Tool',
-                  description: 'High-quality farming tool for various agricultural tasks.',
+                  description:
+                      'High-quality farming tool for various agricultural tasks.',
                   price: '\$150',
                   rating: 4.5,
                 ),
@@ -684,7 +705,8 @@ class MarketPageContent extends StatelessWidget {
                 MarketItem(
                   imagePath: 'lib/assets/ferti1.jpg',
                   title: 'Organic Fertilizer',
-                  description: 'Organic fertilizer enriched with essential nutrients for plants.',
+                  description:
+                      'Organic fertilizer enriched with essential nutrients for plants.',
                   price: '\$30',
                   rating: 4.2,
                 ),
@@ -692,7 +714,8 @@ class MarketPageContent extends StatelessWidget {
                 MarketItem(
                   imagePath: 'lib/assets/market2.png',
                   title: 'Farming Tool',
-                  description: 'High-quality farming tool for various agricultural tasks.',
+                  description:
+                      'High-quality farming tool for various agricultural tasks.',
                   price: '\$150',
                   rating: 4.5,
                 ),
@@ -700,7 +723,8 @@ class MarketPageContent extends StatelessWidget {
                 MarketItem(
                   imagePath: 'lib/assets/ferti2.jpg',
                   title: 'Organic Fertilizer',
-                  description: 'Organic fertilizer enriched with essential nutrients for plants.',
+                  description:
+                      'Organic fertilizer enriched with essential nutrients for plants.',
                   price: '\$30',
                   rating: 4.2,
                 ),
@@ -708,7 +732,8 @@ class MarketPageContent extends StatelessWidget {
                 MarketItem(
                   imagePath: 'lib/assets/market3.jpg',
                   title: 'Farming Tool',
-                  description: 'High-quality farming tool for various agricultural tasks.',
+                  description:
+                      'High-quality farming tool for various agricultural tasks.',
                   price: '\$150',
                   rating: 4.5,
                 ),
@@ -716,7 +741,8 @@ class MarketPageContent extends StatelessWidget {
                 MarketItem(
                   imagePath: 'lib/assets/ferti3.jpg',
                   title: 'Organic Fertilizer',
-                  description: 'Organic fertilizer enriched with essential nutrients for plants.',
+                  description:
+                      'Organic fertilizer enriched with essential nutrients for plants.',
                   price: '\$30',
                   rating: 4.2,
                 ),
@@ -724,7 +750,8 @@ class MarketPageContent extends StatelessWidget {
                 MarketItem(
                   imagePath: 'lib/assets/market1.jpg',
                   title: 'Farming Tool',
-                  description: 'High-quality farming tool for various agricultural tasks.',
+                  description:
+                      'High-quality farming tool for various agricultural tasks.',
                   price: '\$150',
                   rating: 4.5,
                 ),
@@ -732,7 +759,8 @@ class MarketPageContent extends StatelessWidget {
                 MarketItem(
                   imagePath: 'lib/assets/ferti1.jpg',
                   title: 'Organic Fertilizer',
-                  description: 'Organic fertilizer enriched with essential nutrients for plants.',
+                  description:
+                      'Organic fertilizer enriched with essential nutrients for plants.',
                   price: '\$30',
                   rating: 4.2,
                 ),
@@ -740,7 +768,8 @@ class MarketPageContent extends StatelessWidget {
                 MarketItem(
                   imagePath: 'lib/assets/market2.png',
                   title: 'Farming Tool',
-                  description: 'High-quality farming tool for various agricultural tasks.',
+                  description:
+                      'High-quality farming tool for various agricultural tasks.',
                   price: '\$150',
                   rating: 4.5,
                 ),
@@ -748,7 +777,8 @@ class MarketPageContent extends StatelessWidget {
                 MarketItem(
                   imagePath: 'lib/assets/ferti2.jpg',
                   title: 'Organic Fertilizer',
-                  description: 'Organic fertilizer enriched with essential nutrients for plants.',
+                  description:
+                      'Organic fertilizer enriched with essential nutrients for plants.',
                   price: '\$30',
                   rating: 4.2,
                 ),
@@ -756,7 +786,8 @@ class MarketPageContent extends StatelessWidget {
                 MarketItem(
                   imagePath: 'lib/assets/market3.jpg',
                   title: 'Farming Tool',
-                  description: 'High-quality farming tool for various agricultural tasks.',
+                  description:
+                      'High-quality farming tool for various agricultural tasks.',
                   price: '\$150',
                   rating: 4.5,
                 ),
@@ -764,7 +795,8 @@ class MarketPageContent extends StatelessWidget {
                 MarketItem(
                   imagePath: 'lib/assets/ferti3.jpg',
                   title: 'Organic Fertilizer',
-                  description: 'Organic fertilizer enriched with essential nutrients for plants.',
+                  description:
+                      'Organic fertilizer enriched with essential nutrients for plants.',
                   price: '\$30',
                   rating: 4.2,
                 ),
@@ -856,9 +888,6 @@ class MarketItem extends StatelessWidget {
     );
   }
 }
-
-
-
 
 class ForumPageContent extends StatelessWidget {
   @override
@@ -1040,7 +1069,6 @@ class ProductItem extends StatelessWidget {
   }
 }
 
-
 class ProfilePageContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -1049,7 +1077,6 @@ class ProfilePageContent extends StatelessWidget {
     );
   }
 }
-
 
 // Home section
 class HomePage extends StatefulWidget {
@@ -1065,7 +1092,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       appBar: AppBar(
         title: const Text('AgriGoals'),
@@ -1087,9 +1113,9 @@ class _HomePageState extends State<HomePage> {
         },
         children: [
           HomePageContent(),
-          MarketPageContent(), 
-          ForumPageContent(), 
-          ProfilePageContent(), 
+          MarketPageContent(),
+          ForumPageContent(),
+          ProfilePageContent(),
           // Your page content goes here
         ],
       ),
@@ -1109,7 +1135,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            // drawer items 
+            // drawer items
             ListTile(
               title: Text(
                 'Weather',
@@ -1126,9 +1152,10 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             ListTile(
-              title: Text('Soil Health',
+              title: Text(
+                'Soil Health',
                 style: TextStyle(
-                    fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               onTap: () {
@@ -1136,9 +1163,10 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             ListTile(
-              title: Text('Crop Management',
+              title: Text(
+                'Crop Management',
                 style: TextStyle(
-                    fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               onTap: () {
@@ -1146,9 +1174,10 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             ListTile(
-              title: Text('Market Trends',
+              title: Text(
+                'Market Trends',
                 style: TextStyle(
-                    fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               onTap: () {
@@ -1156,9 +1185,10 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             ListTile(
-              title: Text('Sustainable Practices',
+              title: Text(
+                'Sustainable Practices',
                 style: TextStyle(
-                    fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               onTap: () {
@@ -1166,9 +1196,10 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             ListTile(
-              title: Text('Innovation',
+              title: Text(
+                'Innovation',
                 style: TextStyle(
-                    fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               onTap: () {
@@ -1176,9 +1207,10 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             ListTile(
-              title: Text('Chatbot',
+              title: Text(
+                'Chatbot',
                 style: TextStyle(
-                    fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               onTap: () {
@@ -1186,9 +1218,10 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             ListTile(
-              title: Text('Feedback',
+              title: Text(
+                'Feedback',
                 style: TextStyle(
-                    fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               onTap: () {
@@ -1196,9 +1229,10 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             ListTile(
-              title: Text('Policies',
+              title: Text(
+                'Policies',
                 style: TextStyle(
-                    fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               onTap: () {
@@ -1206,7 +1240,8 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             ListTile(
-              title: Text('Logout',
+              title: Text(
+                'Logout',
                 style: TextStyle(
                   color: Color.fromARGB(255, 223, 15, 0),
                   fontWeight: FontWeight.bold,
@@ -1244,6 +1279,7 @@ class _HomePageState extends State<HomePage> {
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: const Color(0xFF613EEA),
+        unselectedItemColor: Colors.black, // Default item color
         onTap: _onItemTapped,
       ),
     );
@@ -1266,8 +1302,6 @@ class _HomePageState extends State<HomePage> {
     super.dispose();
   }
 }
-
-
 
 class EventWorkshopItem extends StatelessWidget {
   final String imagePath;
@@ -1324,7 +1358,10 @@ class BlogItem extends StatelessWidget {
   final String title;
   final String description;
 
-  BlogItem({required this.imagePath, required this.title, required this.description});
+  BlogItem(
+      {required this.imagePath,
+      required this.title,
+      required this.description});
 
   @override
   Widget build(BuildContext context) {
@@ -1360,8 +1397,6 @@ class BlogItem extends StatelessWidget {
   }
 }
 
-
-
 // WeatherPage
 class WeatherPage extends StatefulWidget {
   @override
@@ -1369,7 +1404,8 @@ class WeatherPage extends StatefulWidget {
 }
 
 class _WeatherPageState extends State<WeatherPage> {
-  Future<dynamic> _weatherData = Future.value(null); // Initialize with a non-null value
+  Future<dynamic> _weatherData =
+      Future.value(null); // Initialize with a non-null value
 
   @override
   void initState() {
@@ -1429,7 +1465,6 @@ class _WeatherPageState extends State<WeatherPage> {
   }
 }
 
-
 /// WeatherWidget for weather data fetch and make it visible
 class WeatherWidget extends StatelessWidget {
   final dynamic weatherData;
@@ -1457,7 +1492,8 @@ class WeatherWidget extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('lib/assets/backgrnd.png'), // Replace with your image path
+            image: AssetImage(
+                'lib/assets/backgrnd.png'), // Replace with your image path
             fit: BoxFit.cover,
           ),
         ),
@@ -1537,8 +1573,6 @@ class WeatherWidget extends StatelessWidget {
   }
 }
 
-
-
 // // NextSevenDaysWidget to display the weather forecast for the next 7 days
 // class NextSevenDaysWidget extends StatelessWidget {
 //   final List<dynamic> forecastData;
@@ -1602,5 +1636,4 @@ class WeatherWidget extends StatelessWidget {
 //     );
 //   }
 // }
-
 
