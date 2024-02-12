@@ -220,6 +220,8 @@ class SignupPage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // Handle sign up button press
+
+                
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF613EEA),
@@ -963,7 +965,18 @@ class ForumPageContent extends StatelessWidget {
   }
 }
 
-// Widget for displaying category item
+
+
+
+// Define a model class for representing chat messages
+class ChatMessage {
+  final String senderName;
+  final String message;
+
+  ChatMessage({required this.senderName, required this.message});
+}
+
+// Define the CategoryItem widget
 class CategoryItem extends StatelessWidget {
   final String title;
   final String description;
@@ -983,12 +996,122 @@ class CategoryItem extends StatelessWidget {
         title: Text(title),
         subtitle: Text(description),
         onTap: () {
-          // Navigate to category page
+          // Navigate to the ChatGroupScreen when category item is tapped
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => ChatGroupScreen(title: title)),
+          );
         },
       ),
     );
   }
 }
+
+// Define the ChatGroupScreen widget
+class ChatGroupScreen extends StatefulWidget {
+  final String title;
+
+  const ChatGroupScreen({Key? key, required this.title}) : super(key: key);
+
+  @override
+  _ChatGroupScreenState createState() => _ChatGroupScreenState();
+}
+
+class _ChatGroupScreenState extends State<ChatGroupScreen> {
+  TextEditingController _messageController = TextEditingController();
+  List<ChatMessage> _messages = []; // List to store chat messages
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Column(
+        children: [
+          // Placeholder for user name
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                CircleAvatar(
+                  // Placeholder for user profile picture
+                  child: Icon(Icons.person),
+                ),
+                SizedBox(width: 10),
+                Text(
+                  'Hemant Kumar', // Replace with actual user name
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          // Chat messages will be displayed here
+          Expanded(
+            child: ListView.builder(
+              itemCount: _messages.length,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  title: Text(_messages[index].senderName),
+                  subtitle: Text(_messages[index].message),
+                  leading: CircleAvatar(
+                    // Placeholder for user profile picture
+                    child: Icon(Icons.person),
+                  ),
+                );
+              },
+            ),
+          ),
+          // Input field for typing messages
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              children: [
+                Expanded(
+                  child: TextField(
+                    controller: _messageController,
+                    decoration: InputDecoration(
+                      hintText: 'Type your message...',
+                    ),
+                  ),
+                ),
+                IconButton(
+                  icon: Icon(Icons.send),
+                  onPressed: () {
+                    // Send message functionality goes here
+                    String message = _messageController.text;
+                    if (message.isNotEmpty) {
+                      // Clear the text field after sending the message
+                      _messageController.clear();
+                      // Add the message to the list of messages
+                      setState(() {
+                        _messages.add(ChatMessage(senderName: 'Hemant Kumar', message: message));
+                      });
+                    }
+                  },
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    _messageController.dispose();
+    super.dispose();
+  }
+}
+
+
+
+
+
 
 // Widget for displaying product item
 class ProductItem extends StatelessWidget {
@@ -1041,14 +1164,171 @@ class ProductItem extends StatelessWidget {
 }
 
 
-class ProfilePageContent extends StatelessWidget {
+
+
+class ProfilePageContent extends StatefulWidget {
+  @override
+  _ProfilePageContentState createState() => _ProfilePageContentState();
+}
+
+class _ProfilePageContentState extends State<ProfilePageContent> {
+  // Variables to store user details
+  String _fullName = 'John Doe';
+  String _emailAddress = 'johndoe@example.com';
+  String _phoneNumber = '1234567890';
+  String _dateOfBirth = '01/01/1990';
+  String _gender = 'Male';
+  String _nationality = 'Country';
+  String _languagesSpoken = 'English, Spanish';
+  String _soilType = 'Loamy';
+
+  // Edit mode flag
+  bool _editMode = false;
+
+  // Controllers for text fields
+  TextEditingController _fullNameController = TextEditingController();
+  TextEditingController _emailAddressController = TextEditingController();
+  TextEditingController _phoneNumberController = TextEditingController();
+  TextEditingController _dateOfBirthController = TextEditingController();
+  TextEditingController _genderController = TextEditingController();
+  TextEditingController _nationalityController = TextEditingController();
+  TextEditingController _languagesSpokenController = TextEditingController();
+  TextEditingController _soilTypeController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('Other Page3 Content'),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Profile'),
+        automaticallyImplyLeading: false, 
+        actions: [
+          IconButton(
+            icon: Icon(_editMode ? Icons.save : Icons.edit),
+            onPressed: () {
+              setState(() {
+                if (_editMode) {
+                  // Save changes and exit edit mode
+                  _updateProfile();
+                  _editMode = false;
+                } else {
+                  // Enter edit mode
+                  _editMode = true;
+                  _fullNameController.text = _fullName;
+                  _emailAddressController.text = _emailAddress;
+                  _phoneNumberController.text = _phoneNumber;
+                  _dateOfBirthController.text = _dateOfBirth;
+                  _genderController.text = _gender;
+                  _nationalityController.text = _nationality;
+                  _languagesSpokenController.text = _languagesSpoken;
+                  _soilTypeController.text = _soilType;
+                }
+              });
+            },
+          ),
+        ],
+      ),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: 10),
+            _buildProfileDetail('Full Name', _fullName, _fullNameController),
+            _buildProfileDetail('Email Address', _emailAddress, _emailAddressController),
+            _buildProfileDetail('Phone Number', _phoneNumber, _phoneNumberController),
+            _buildProfileDetail('Date of Birth', _dateOfBirth, _dateOfBirthController),
+            _buildProfileDetail('Gender', _gender, _genderController),
+            _buildProfileDetail('Nationality', _nationality, _nationalityController),
+            _buildProfileDetail('Languages Spoken', _languagesSpoken, _languagesSpokenController),
+            _buildProfileDetail('Soil Type', _soilType, _soilTypeController),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildProfileDetail(String label, String value, TextEditingController controller) {
+  return Container(
+    width: double.infinity,
+    padding: EdgeInsets.all(8.0),
+    margin: EdgeInsets.symmetric(vertical: 8.0),
+    decoration: BoxDecoration(
+      color: Color(0xFFEFEFEF),
+      border: Border.all(
+        color: Color(0xFF613EEA),
+      ),
+      borderRadius: BorderRadius.circular(8.0),
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          label,
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(height: 5),
+        _editMode
+            ? TextFormField(
+                controller: controller,
+                decoration: InputDecoration(
+                  hintText: value,
+                  border: InputBorder.none,
+                  filled: true,
+                  fillColor: Colors.grey[200],
+                ),
+              )
+            : Text(
+                value,
+                style: TextStyle(
+                  fontSize: 16,
+                ),
+              ),
+      ],
+    ),
+  );
+}
+
+
+
+  void _updateProfile() {
+    setState(() {
+      // Update user details with the edited values
+      _fullName = _fullNameController.text;
+      _emailAddress = _emailAddressController.text;
+      _phoneNumber = _phoneNumberController.text;
+      _dateOfBirth = _dateOfBirthController.text;
+      _gender = _genderController.text;
+      _nationality = _nationalityController.text;
+      _languagesSpoken = _languagesSpokenController.text;
+      _soilType = _soilTypeController.text;
+    });
+    _showUpdateDialog();
+  }
+
+  void _showUpdateDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Profile Updated'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text('OK'),
+            ),
+          ],
+        );
+      },
     );
   }
 }
+
+
 
 
 // Home section
@@ -1602,5 +1882,4 @@ class WeatherWidget extends StatelessWidget {
 //     );
 //   }
 // }
-
 
