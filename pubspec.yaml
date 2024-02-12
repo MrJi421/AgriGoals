@@ -12,6 +12,11 @@ dependencies:
     sdk: flutter
   font_awesome_flutter: ^9.2.0
   cupertino_icons: ^1.0.2
+  sms_autofill: ^2.3.0
+  firebase_auth: ^4.17.4
+   
+
+   
 
 dev_dependencies:
   flutter_test:
