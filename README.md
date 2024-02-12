@@ -1,6 +1,6 @@
-# first_proj
+# AgriGoals
 
-A new Flutter project.
+The AgriGoals is our response to these challenges. It's a comprehensive platform designed to empower farmers with the tools, knowledge, and resources they need to transition to sustainable agriculture.
 
 ## Getting Started
 
