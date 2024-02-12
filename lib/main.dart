@@ -435,7 +435,7 @@ class HomePageContent extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Headline of the News',
+                            'Fires, drought, and dumping milk made headlines in 2023',
                             style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
@@ -445,7 +445,7 @@ class HomePageContent extends StatelessWidget {
                               height:
                                   5), // Add some space between headline and description
                           Text(
-                            'Description of the news. You can add more details here to provide a brief overview of the news.',
+                            'Here is a look at notable events that impacted agriculture in the U.S. and abroad in 2023.',
                             style: TextStyle(
                               fontSize: 12,
                             ),
@@ -481,7 +481,7 @@ class HomePageContent extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Headline of the News',
+                            'Delhi weather: Stronger winds likely for couple of days, says IMD',
                             style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
@@ -491,7 +491,7 @@ class HomePageContent extends StatelessWidget {
                               height:
                                   5), // Add some space between headline and description
                           Text(
-                            'Description of the news. You can add more details here to provide a brief overview of the news.',
+                            'Delhi air quality expected to improve to satisfactory as strong winds of 25-35 kmph blow on Wednesday and Thursday, with temperatures',
                             style: TextStyle(
                               fontSize: 12,
                             ),
@@ -529,26 +529,33 @@ class HomePageContent extends StatelessWidget {
                       SizedBox(width: 10), // Add initial padding
                       EventWorkshopItem(
                         imagePath: 'lib/assets/event1.jpg',
-                        headline: 'Event 1 Headline',
-                        description: 'Description of Event 1',
+                        headline:
+                            'Snowfall in Himachal and Jammu and Kashmir disrupts normal life.',
+                        description:
+                            'Quite cold weather and around 10-50 people died',
                       ),
                       SizedBox(width: 10), // Add space between items
                       EventWorkshopItem(
                         imagePath: 'lib/assets/event2.jpg',
-                        headline: 'Event 2 Headline',
-                        description: 'Description of Event 2',
+                        headline:
+                            'Rainfall in parts of north India intensifies winter chill.',
+                        description: 'Everyone drowned in the flood',
                       ),
                       SizedBox(width: 10), // Add space between items
                       EventWorkshopItem(
                         imagePath: 'lib/assets/event3.jpg',
-                        headline: 'Event 3 Headline',
-                        description: 'Description of Event 3',
+                        headline:
+                            'Dense fog at Delhi airport delays over 300 flights.',
+                        description:
+                            'No cars are moving on borad and everything is stuck',
                       ),
                       SizedBox(width: 10),
                       EventWorkshopItem(
                         imagePath: 'lib/assets/event1.jpg',
-                        headline: 'Event 3 Headline',
-                        description: 'Description of Event 3',
+                        headline:
+                            'An analysis by Chennai Rains says that the North Indian ocean basin has become churning more intense cyclones in the past two decades.',
+                        description:
+                            'All the chennai rains reached till north indian oceans and it had been a critical condition.',
                       ),
                       SizedBox(width: 10),
                       EventWorkshopItem(
